@@ -1,4 +1,5 @@
-import { Container, Grid, Paper, Typography } from "@mui/material";
+import { Container, Paper, Typography, Grid } from "@mui/material";
+
 import React from "react";
 
 type RepoOption = {
@@ -12,11 +13,11 @@ type RepoListProps = {
 
 export default function RepoList({ repoOptions }: RepoListProps) {
   return (
-    <Container sx={{ p: 2 }}>
+    <Container sx={{ padding: 2 }}>
       <Grid container spacing={2}>
         {repoOptions.map((repo) => (
           <Grid item xs={12} md={6} key={repo.name}>
-            <Paper elevation={3} sx={{ p: 2, borderRadius: 1 }}>
+            <Paper elevation={3} sx={{ p: 2, borderRadius: 2 }}>
               <Typography variant="h6">{repo.name}</Typography>
               <Typography variant="body2" color="text.secondary">
                 {repo.description}

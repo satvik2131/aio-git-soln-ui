@@ -87,10 +87,7 @@ export function About() {
 
         {/* Action Buttons */}
         <Stack
-          direction="row"
-          spacing={2}
-          justifyContent="center"
-          sx={{ my: 3 }}
+          sx={{ my: 3, flexDirection: "row", gap: 2, justifyContent: "center" }}
         >
           <Button
             variant="contained"

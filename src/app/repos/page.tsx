@@ -22,7 +22,7 @@ export default function Repos() {
 
   return (
     <Container>
-      <Stack padding={4} spacing={3}>
+      <Stack sx={{ p: 4, gap: 3 }}>
         <Typography
           variant="h3"
           sx={{
@@ -38,23 +38,10 @@ export default function Repos() {
 
         {/**Search */}
         <Autocomplete
-          freeSolo
-          options={repoOptions}
-          sx={{
-            px: { md: 20 },
-          }}
-          getOptionLabel={(option) => option.name} // display repo name
-          renderInput={(params: AutocompleteRenderInputParams) => (
-            <TextField
-              {...params}
-              label="Search Repositories"
-              variant="outlined"
-            />
-          )}
-          renderOption={(props, option) => (
-            <li {...props} key={option.name}>
-              {option.description}
-            </li>
+          sx={{ px: { md: 15 } }}
+          options={repoOptions.map((option) => option.name)}
+          renderInput={(params) => (
+            <TextField {...params} label="Search repository" />
           )}
         />
       </Stack>

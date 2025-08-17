@@ -18,15 +18,15 @@ export function Intro() {
 
   return (
     <Stack
-      direction={{ xs: "column", md: "row" }}
-      spacing={6}
-      alignItems="center"
-      justifyContent="space-between"
       sx={{
         width: "100%",
         minHeight: "75vh",
         py: { xs: 6 },
         px: 2,
+        flexDirection: { xs: "column", md: "row" }, // direction
+        gap: 6, // spacing
+        alignItems: "center",
+        justifyContent: "space-between",
       }}
     >
       {/* Lottie Animation */}
@@ -40,7 +40,7 @@ export function Intro() {
       </Box>
 
       {/* Text Content */}
-      <Stack spacing={3} sx={{ flex: 2 }}>
+      <Stack sx={{ flex: 2, gap: 3 }}>
         <Typography variant="h3" component="h1" sx={{ fontWeight: "bold" }}>
           {Title}
         </Typography>
@@ -54,7 +54,7 @@ export function Intro() {
         </Typography>
 
         {/* Instead of a paragraph, use bullet points */}
-        <Stack spacing={1.5}>
+        <Stack sx={{ gap: 1.5 }}>
           <Typography variant="body1" color="text.secondary">
             ✨ Got dusty old repositories taking up space?
           </Typography>
@@ -75,10 +75,15 @@ export function Intro() {
         </Stack>
 
         {/* Buttons */}
-        <Stack direction="row" spacing={2} mt={2}>
+        <Stack
+          sx={{
+            flexDirection: "row",
+            gap: 2,
+            mt: 2,
+          }}
+        >
           <Button
             variant="contained"
-            href=""
             size="large"
             color="primary"
             sx={{

@@ -12,14 +12,14 @@ export const GithubAuth = () => {
 
   return (
     <Stack
-      alignItems="center"
-      justifyContent="center"
-      spacing={3}
       sx={{
         textAlign: "center",
         px: 2,
         minHeight: "100vh",
+        aligneItems: "center",
+        justifyContent: "center",
         scrollSnapAlign: "start",
+        gap: 3,
       }}
     >
       {/* Main Heading */}
